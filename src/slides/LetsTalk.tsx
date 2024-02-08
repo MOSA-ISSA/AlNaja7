@@ -1,13 +1,13 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages } from '../assets/ImagesExport'
 
 const LetsTalk = () => {
   return (
     <View style={styles.screen}>
       <Text style={styles.Text}>let's talk</Text>
       <Image
-        source={importImages("LetsTalk")}
+        source={getImages("LetsTalk")}
         style={styles.image}
         />
         

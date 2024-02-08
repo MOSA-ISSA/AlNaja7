@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "0.73.3",
-    "react-native-lazyload": "^1.1.0"
+    "react-native": "0.73.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

@@ -1,22 +1,24 @@
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import {getImages} from '../assets/ImagesExport'
+
+const sizes = Dimensions.get('window');
 
 const Music = () => {
   return (
     <View style={styles.screen}>
       <Text style={styles.ttt}>Music</Text>
       <Text style={styles.title}>listen</Text>
-      <Image source={importImages().spotify}style={styles.image1}/>
-      <Image source={importImages().eminem} style={styles.image}/>
+      <Image source={getImages("spotify")}style={styles.image1}/>
+      <Image source={getImages("eminem")} style={styles.image}/>
       <Text style={styles.title}>eminem</Text>
-      <Image source={importImages().theweeknd} style={styles.image}/> 
+      <Image source={getImages("theweeknd")} style={styles.image}/> 
       <Text style={styles.title}>theweeknd</Text>
-      <Image source={importImages().olivia} style={styles.image}/>
+      <Image source={getImages("olivia")} style={styles.image}/>
       <Text style={styles.title}>olivia</Text>
-      <Image source={importImages().billie} style={styles.image}/>
+      <Image source={getImages("billie")} style={styles.image}/>
       <Text style={styles.title}>billie</Text>
-      <Image source={importImages().Music} style={styles.image}/> 
+      {/* <Image source={getImages("Music")} style={styles.image}/>  */}
     </View>
   )
 }
@@ -31,23 +33,24 @@ const styles = StyleSheet.create({
   }, 
   ttt:{
   color:"white",
-  fontSize:80,
+  fontSize:50,
   fontWeight:"bold",
   textAlign:'center'
   },
   title:{
     color:"black",
     textAlign:'center',
-    fontSize:30
+    fontSize:18*sizes.fontScale
   },
   image: {
-    height:155,
-    width:280,
+    height:sizes.height/8,
+    width:sizes.width/3,
     margin:15,
-    alignSelf:'center'
+    alignSelf:'center',
+    resizeMode:"cover",
   },
   image1:{
-    height:100,
+    height:sizes.height*0.05,
     width:"100%",
     alignSelf:'center',
     resizeMode:"contain",

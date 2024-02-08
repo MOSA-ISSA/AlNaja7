@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages } from '../assets/ImagesExport'
 
 const Podcasts = () => {
 
@@ -10,14 +10,14 @@ const Podcasts = () => {
 
       <View style={styles.cover}>
         <Image
-          source={importImages('book')}
+          source={getImages('book')}
           style={styles.photo}
         />
       </View>
 
       <View style={styles.cover}>
         <Image
-          source={importImages('bc')}
+          source={getImages('bc')}
           style={styles.photo}
           />
       </View>

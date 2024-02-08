@@ -1,6 +1,6 @@
 import { Dimensions, Image, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages } from '../assets/ImagesExport'
 
 const width= Dimensions.get('window').width
 
@@ -11,7 +11,7 @@ const Motorcycles = () => {
         <View style={styles.page}>
           <Text style={styles.text}>yz125 -{">"}</Text>
 
-          <Image style={styles.image} source={importImages("yz125")} />
+          <Image style={styles.image} source={getImages("yz125")} />
 
           <Text style={styles.teh}>It is one of the fastest motorcycles and one of my favorite types</Text>
 
@@ -22,7 +22,7 @@ const Motorcycles = () => {
         <View style={styles.page}>
           <Text style={styles.text}>{"<"}-crf250-{">"}</Text>
 
-          <Image style={styles.land} source={importImages('crf250')} />
+          <Image style={styles.land} source={getImages('crf250')} />
 
           <Text style={styles.teh}>It is a very fast bike, with a launch control button that makes the first burst of power flow through the drive chain and into the rear wheel.</Text>
 
@@ -32,7 +32,7 @@ const Motorcycles = () => {
         <View style={styles.page}>
           <Text style={styles.text}>{"<"}-Ktm125</Text>
 
-          <Image style={styles.boof} source={importImages("ktm1259")}/>
+          <Image style={styles.boof} source={getImages("ktm1259")}/>
 
           <Text style={styles.teh}>A motorcycle with distinctive and unique performance, in addition to a fully designed body design inspired by racing, which provides comfort in riding</Text>
 

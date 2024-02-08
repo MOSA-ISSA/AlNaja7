@@ -1,11 +1,11 @@
-import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native'
+import {ImageBackground, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages } from '../assets/ImagesExport'
 
 const SVRAT = () => {
   return (
     <View style={styles.container}>
-      <ImageBackground source={importImages("seventeeny")} style={styles.img} />
+      <ImageBackground source={getImages("seventeeny")} style={styles.img} />
 
       <Text style={styles.text}>welcom to our website SVRAT</Text>
 

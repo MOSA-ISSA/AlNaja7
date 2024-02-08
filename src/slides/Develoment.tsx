@@ -1,11 +1,11 @@
-import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native'
+import {ImageBackground, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages } from '../assets/ImagesExport'
 
 const Development = () => {
   return (
     <View style={styles.screen}>
-      <ImageBackground source={importImages("Community")} style={styles.ImageBackground}>
+      <ImageBackground source={getImages("Community")} style={styles.ImageBackground}>
       <Text style={styles.ttt}>Human development</Text>
       <Text style={styles.ttt}>
         Human development is defined as the process of enlarging people's

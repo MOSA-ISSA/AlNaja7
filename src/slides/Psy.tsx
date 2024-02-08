@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages } from '../assets/ImagesExport'
 
 const Psy = () => {
   return (
@@ -8,11 +8,11 @@ const Psy = () => {
       <Text style={styles.txt}>Psy.Le</Text>
       <View style={styles.imgContainer}>
         <Image
-          source={importImages().ccc} style={styles.Image1} />
+          source={getImages("ccc")} style={styles.Image1} />
         <Image
-          source={importImages().shugairi} style={styles.Image1} />
+          source={getImages("shugairi")} style={styles.Image1} />
           <Image
-          source={importImages().tre} style={styles.Image1} />
+          source={getImages("tre")} style={styles.Image1} />
       </View>
     </View>
 

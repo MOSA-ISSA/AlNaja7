@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages } from '../assets/ImagesExport'
 
 const OnePiece = () => {
   return (
-    <ImageBackground style={styles.container} source={importImages("onepiec")}>
+    <ImageBackground style={styles.container} source={getImages("onepiec")}>
 
 
       <Text style={styles.title}>One piece</Text>

@@ -1,12 +1,12 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages } from '../assets/ImagesExport'
 
 const Minecraft = () => {
   return (
     <View>
       <Text style={styles.title}>       minecraft </Text>
-      <Image style={styles.img} source={importImages('mine')} />
+      <Image style={styles.img} source={getImages('mine')} />
       <Text style={styles.textFont}>
         لعبه تعتمد على البقاء على قيد الحياه  survival  ولكن اللاعبين استخدموها لاخراج مواهبهم بشكل خيالي بناء مستعمرات وهذا يزيد من ابداعات البشريه    
       survival: هو عيش شخصيه اللعبه بعالم مفتوح يحاول ان يبقى على قيد الحياه بواسطه جمع الموارد
@@ -14,7 +14,7 @@ const Minecraft = () => {
       
 
       <View style={styles.alignTxt}>
-      <Image style={styles.man} source={importImages("crist")} />
+      <Image style={styles.man} source={getImages("crist")} />
 
       <Text style={styles.txt}>  مخترع ماين كرافت  </Text>
       </View> 

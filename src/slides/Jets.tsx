@@ -1,10 +1,10 @@
 import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages } from '../assets/ImagesExport'
 
 const Jets = () => {
   return (
-    <ImageBackground  style={styles.container }  source={importImages("ship")}>
+    <ImageBackground  style={styles.container }  source={getImages("ship")}>
       <Text style={styles.txt}>✈fighter jets✈</Text>
       <Text style={styles.txt}>✈✈✈✈✈✈✈✈✈✈✈✈✈✈✈</Text>
       <View style={styles.card}>
@@ -15,7 +15,7 @@ const Jets = () => {
         </View>
         <Image 
           style={styles.imge}
-          source={require("../assets/Images/Jet.jpg")} 
+          source={getImages("Jet")}
           progressiveRenderingEnabled
           // PlaceholderContent={<ActivityIndicator />}
           />

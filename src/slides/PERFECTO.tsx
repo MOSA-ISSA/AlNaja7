@@ -1,68 +1,78 @@
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, Image, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages} from '../assets/ImagesExport'
+
+const sizes = Dimensions.get('window');
 
 const PERFECTO = () => {
   return (
     <View style={styles.container}>
-      <View>
+      
       <Text style={styles.text}>PERFECTO</Text>
-      <View style={styles.child1}>
-        <View>
-          <Text style={styles.txt}>Pizza</Text>
-          <Text style={styles.txt}>80</Text>
+      
+      <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator>
+      <View style={styles.tab}>
+        <View style={styles.child1}>
+          <View>
+            <Text style={styles.txt}>Pizza</Text>
+            <Text style={styles.txt}>80</Text>
+          </View>
+          <Image style={styles.img} source={getImages("pizza")} />
         </View>
-        <Image style={styles.img} source={importImages("pizza")} />
+
+        <View style={styles.child1}>
+          <View>
+            <Text style={styles.txt}>fettuccine</Text>
+            <Text style={styles.txt}>120</Text>
+          </View>
+          <Image style={styles.img} source={getImages("pasta")}/>
+        </View>
+
+        <View style={styles.child1}>
+          <View>
+            <Text style={styles.txt}>spaghetti</Text>
+            <Text style={styles.txt}>80</Text>
+          </View>
+          <Image style={styles.img} source={getImages("pasta2")}/>
+        </View>
+
+        <View style={styles.child1}>
+          <View>
+            <Text style={styles.txt}>ravioli</Text>
+            <Text style={styles.txt}>150</Text>
+          </View>
+          <Image style={styles.img} source={getImages("oo")} />
+        </View>
+        <Text style={styles.slideNext}> {"slide next->  "}</Text>
       </View>
 
-      <View style={styles.child1}>
-        <View>
-          <Text style={styles.txt}>fettuccine</Text>
-          <Text style={styles.txt}>120</Text>
+      <View style={styles.tab}>
+        <View style={styles.child1}>
+          <View>
+            <Text style={styles.txt}>pasta</Text>
+            <Text style={styles.txt}>90</Text>
+          </View>
+          <Image style={styles.img} source={getImages("pasta3")}/>
         </View>
-        <Image style={styles.img} source={importImages("pasta")}/>
+
+        <View style={styles.child1}>
+          <View>
+            <Text style={styles.txt}>risotto</Text>
+            <Text style={styles.txt}>120</Text>
+          </View>
+          <Image style={styles.img} source={getImages("rr")} />
+        </View>
+
+        <View style={styles.child1}>
+          <View>
+            <Text style={styles.txt}>polanta</Text>
+            <Text style={styles.txt}>100</Text>
+          </View>
+          <Image style={styles.img} source={getImages("pp")} />
+        </View>
       </View>
 
-      <View style={styles.child1}>
-        <View>
-          <Text style={styles.txt}>spaghetti</Text>
-          <Text style={styles.txt}>80</Text>
-        </View>
-        <Image style={styles.img} source={importImages("pasta2")}/>
-      </View>
-
-      <View style={styles.child1}>
-        <View>
-          <Text style={styles.txt}>pasta</Text>
-          <Text style={styles.txt}>90</Text>
-        </View>
-        <Image style={styles.img} source={importImages("pasta3")}/>
-      </View>
-
-      <View style={styles.child1}>
-        <View>
-          <Text style={styles.txt}>risotto</Text>
-          <Text style={styles.txt}>120</Text>
-        </View>
-        <Image style={styles.img} source={importImages("rr")} />
-      </View>
-
-      <View style={styles.child1}>
-        <View>
-          <Text style={styles.txt}>polanta</Text>
-          <Text style={styles.txt}>100</Text>
-        </View>
-        <Image style={styles.img} source={importImages("pp")} />
-      </View>
-
-      <View style={styles.child1}>
-        <View>
-          <Text style={styles.txt}>ravioli</Text>
-          <Text style={styles.txt}>150</Text>
-        </View>
-        <Image style={styles.img} source={importImages("oo")} />
-      </View>
-      </View>   
+      </ScrollView>   
     </View>
   )
 }
@@ -79,7 +89,8 @@ const styles = StyleSheet.create({
   text: {
     color: "black",
     fontSize: 40,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    // marginBottom:sizes.width*0.2,
   },
   child1: {
     //borderWidth: 1,
@@ -103,5 +114,12 @@ const styles = StyleSheet.create({
     fontSize: 25,
     //fontWeight: 'bold'
   },
- 
+  tab:{
+    flexDirection:'column',
+    width:sizes.width,
+  },
+  slideNext:{
+    fontSize:10,
+    textAlign:'right',
+  }
   })

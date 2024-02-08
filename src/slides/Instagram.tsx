@@ -1,5 +1,5 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { importImages } from '../assets/ImagesExport'
+import { getImages } from '../assets/ImagesExport'
 
 const Instagram = () => {
   return (
@@ -10,7 +10,7 @@ const Instagram = () => {
         <View>
           <View style={{flexDirection:'row'}}>
           <Image
-            source={importImages('tala')}
+            source={getImages('tala')}
             style={styles.profile}
             />
             <Text style={styles.headerItem}>{'33 \nposts'}</Text>
@@ -30,7 +30,7 @@ const Instagram = () => {
 
       <View style={styles.nana}>
         <Image
-          source={importImages('tala2')}
+          source={getImages('tala2')}
           style={styles.profile2}
         />
         <Text>Followed by t__lifestyle</Text>
@@ -47,7 +47,7 @@ const Instagram = () => {
       <View style ={styles.lockC}>
       <View style ={styles.lockCo}>
       <Image
-          source={importImages('lock')}
+          source={getImages('lock')}
           style={styles.lock}
         />
       </View>

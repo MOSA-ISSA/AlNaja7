@@ -1,15 +1,15 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages } from '../assets/ImagesExport'
 
 const FootBall = () => {
   return (
     <View style={styles.container}>
-      <Image style={styles.img} source={importImages("Juventus")}/>
+      <Image style={styles.img} source={getImages("Juventus")}/>
       <Text style={styles.txt} > افضل فريق عرفه التاريخ</Text>
-      <Image style={styles.im} source={importImages("Juventus1")}/>
+      <Image style={styles.im} source={getImages("Juventus1")}/>
       <Text style={styles.txt} >  هؤلاء الذين جعلوا اوروبا تنام بعد العصر </Text>
-      <Image style={styles.kls} source={importImages("Juventus2")}/>
+      <Image style={styles.kls} source={getImages("Juventus2")}/>
       <Text style={styles.txt} >لقاء بين الاسطورتين الظاهره الحائز على الكره الذهبية والهداف التاريخي ومرعب الفرق دل بيرو</Text>
     </View>
   )

@@ -1,83 +1,81 @@
-import { Image, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport';
+import { getImages,} from '../assets/ImagesExport';
+
+const sizes = Dimensions.get('window');
 
 const Shopping = () => {
   return (
   <View>
     <Text style={styles.txt}> REACH ME </Text>
     <Text style={styles.mot}>- FOR QUICK SHOPPING USE ME - </Text>
-    
-    <Image
-      source={importImages().fox}///image
-      style={styles.image}
-      // style=
-    />
-    <View style={styles.darag}>
+
+    <View style={styles.imagesContainer}>
       <Image
-      source={importImages().handm}
-      style={styles.image}
+        source={getImages("fox")}///image
+        style={styles.image}
       />
+
       <View style={styles.darag}>
-        <Image
-        source={importImages().nike}
-        style={styles.shoes}
-        />
+        
+        
+          <Image
+          source={getImages('handm')}
+          style={styles.image}
+          />
+        
+
+        <View style={styles.darag}>
+          <Image
+          source={getImages('nike')}
+          style={styles.image}
+          />
+        </View>
+
       </View>
       
+        <Text style={styles.lung}> ع  </Text>
+        <Text style={styles.lung}> ENG </Text>
+        <Text style={styles.lung}>ע  </Text>
+
     </View>
-    <Text style={styles.arab}> ع  </Text>
-    <Text style={styles.ing}> ENG </Text>
-    <Text style={styles.heb}>ע  </Text>
-    <Text style={styles.WEL}> WELCOME! </Text>
+      <Text style={styles.WEL}> WELCOME! </Text>
     </View>
   );
 }
 const styles = StyleSheet.create({
   txt:{
     color:"darkred",
-    fontSize:55,
+    fontSize:sizes.fontScale*50,
     alignItems:"center",
     alignSelf:"center",
-    marginBottom:10,
   },
   image:{
-    height:150,
-    width:150,
+    height:sizes.height/5,
+    width:sizes.height/5,
+    marginVertical:5,
   },
   darag:{
-    marginLeft: 120,
-  },
-  shoes: {
-    height:150,
-    width:150,
+    marginLeft: sizes.height/5/1.5,
   },
   mot:{ 
     color:"midnightblue",
-    fontSize:20,
+    fontSize:sizes.fontScale*25,
     alignItems:"center",
     alignSelf:"center", 
-    marginBottom:19,
-
+    marginBottom:5,
   },
-  arab: {
-    color:"black",
-    fontSize:30,
-    marginBottom:10,
-    textAlign:"left"
+  imagesContainer:{
+    paddingLeft:(sizes.width-(sizes.height/5+sizes.height/5/1.5*2))/2
   },
-  ing:{ 
+  lung: {
     color:"black",
-    fontSize:20,
-  },
-  heb:{ 
-    color:"black",
-    fontSize:20,
-    textAlign:"left",
+    fontSize:sizes.height*0.03,
+    alignSelf:'flex-start'
   },
   WEL: { 
     color:"darkgoldenrod",
-    fontSize:40,
+    fontSize:sizes.fontScale*50,
     alignItems:"center",
     alignSelf:"center",
   } 

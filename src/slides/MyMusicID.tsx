@@ -1,5 +1,5 @@
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
-import { importImages } from '../assets/ImagesExport';
+import { getImages } from '../assets/ImagesExport';
 
 const MyMusicID = () => {
   return (
@@ -11,7 +11,7 @@ const MyMusicID = () => {
 
       <View style={styles.music}>
       <Image
-        source={importImages().bc}
+        source={getImages("bc")}
         style={styles.img} />
         
         <Text style={styles.artist}>Tylor the creator</Text>
@@ -20,7 +20,7 @@ const MyMusicID = () => {
 
       <View style={styles.music}>
       <Image
-        source={importImages().fayroz}
+        source={getImages("fayroz")}
         style={styles.img} />
         
         <Text style={styles.artist}>FAYROZ</Text>
@@ -28,7 +28,7 @@ const MyMusicID = () => {
       </View>
       <View style={styles.music}>
       <Image
-        source={importImages().MMT}
+        source={getImages("MMT")}
         style={styles.img} />
         
         <Text style={styles.artist}>Metallica</Text>
@@ -36,7 +36,7 @@ const MyMusicID = () => {
 
       <View style={styles.music}>
       <Image
-        source={importImages().LL}
+        source={getImages("LL")}
         style={styles.img} />
         
         <Text style={styles.artist}>LL</Text>
@@ -44,7 +44,7 @@ const MyMusicID = () => {
 
       <View style={styles.music}>
       <Image
-        source={importImages().BB}
+        source={getImages("BB")}
         style={styles.img} />
         
         <Text style={styles.artist}>Eminem</Text>

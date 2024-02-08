@@ -1,4 +1,4 @@
-import {Dimensions, FlatList, StyleSheet, View} from 'react-native';
+import {Dimensions, FlatList,StyleSheet, View} from 'react-native';
 import React from 'react';
 import Shopping from './src/slides/Shopping';
 import Music from './src/slides/Music';
@@ -50,7 +50,6 @@ const App = () => {
     <Ahmad />,
     <Chemistry />,
     <FootBall />,
-    <YOUTUBE />, //
     <Minecraft />,
     <Old />,
     <SVRAT />,
@@ -58,6 +57,7 @@ const App = () => {
     <MyID />,
     <MyId2 />,
     <Jets />,
+    <YOUTUBE />, //
     <Music />, //
     <BillieFan />, //
     <PERFECTO />, //
@@ -70,6 +70,9 @@ const App = () => {
   );
 
   return (
+    // <ScrollView pagingEnabled>
+    //   {allSlides.map((item)=>renderSlides({item}))}
+    // </ScrollView>
     <FlatList
       data={allSlides}
       renderItem={renderSlides}

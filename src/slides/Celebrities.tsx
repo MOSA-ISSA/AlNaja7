@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages } from '../assets/ImagesExport'
 
 const Celebrities = () => {
 
@@ -8,21 +8,21 @@ const Celebrities = () => {
     <View style={styles.screen}>
 
       <Image
-        source={importImages('search')}
+        source={getImages('search')}
         style={styles.icon} />
       <Text style={{textAlign:'center',alignItems:"center"}}>هاندا ارتشيل</Text>
         <View style={styles.Content}>
           <Image
-            source={importImages('rrr')}
+            source={getImages('rrr')}
             style={styles.img} />
           
 
           <Image
-            source={importImages('honda')}
+            source={getImages('honda')}
             style={styles.img} />
             
         <Image
-          source={importImages('sss')}
+          source={getImages('sss')}
           style={styles.img} />
         </View>
     </View>

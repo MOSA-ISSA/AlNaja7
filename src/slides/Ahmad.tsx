@@ -1,12 +1,12 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages,} from '../assets/ImagesExport'
 
 const Ahmad = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>chemistry</Text>
-      <Image style={styles.img} source={importImages('ahmad')} />
+      <Image style={styles.img} source={getImages('ahmad')} />
       <Text style={styles.text}>keep going to height with chemistry world.</Text>
     </View>
   )

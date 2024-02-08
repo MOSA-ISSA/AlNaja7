@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages } from '../assets/ImagesExport'
 
 const Chemistry = () => {
   return (
@@ -18,7 +18,7 @@ const Chemistry = () => {
 
         is it superb? now lets get in and dive in sience ocean!
       </Text>
-      <Image style={styles.img} source={importImages('baker')} />
+      <Image style={styles.img} source={getImages('baker')} />
       
       <View style={styles.container}>
       <Text style={styles.text}>Basic chemistry:

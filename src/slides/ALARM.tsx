@@ -1,18 +1,18 @@
-import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native'
+import { Image,StyleSheet,Text,View} from 'react-native'
 import React from 'react'
-import { importImages } from '../assets/ImagesExport'
+import { getImages,} from '../assets/ImagesExport'
 
 const ALARM = () => {
   return (
     <View style={styles.vieo}>
        <Text style={{color:"black", fontSize:40,marginRight:20}}>SAFTY ALARM</Text>
       <Image
-        source={importImages("location")}
+        source={getImages("location")}
         style={styles.img} 
         />
         <Text style={styles.text}>location</Text>
           <Image
-          source={importImages('sos')}
+          source={getImages('sos')}
           style={styles.img2} />
         <Text style={styles.text}>calls</Text>
 
